@@ -31,4 +31,4 @@ jobs:
           tags: registry.erp-beast.com/mini-project
 
       - name: Logout
-        uses: docker logout registry.erp-beast.com
+        run: docker logout registry.erp-beast.com
