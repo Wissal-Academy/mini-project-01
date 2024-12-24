@@ -25,6 +25,10 @@ jobs:
 
       - name: Build The Docker Image
         uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: registry.erp-beast.com/mini-project
 
       - name: Logout
         uses: docker logout registry.erp-beast.com
