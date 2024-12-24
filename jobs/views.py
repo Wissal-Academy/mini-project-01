@@ -31,3 +31,20 @@ class JobCreateView(CreateView):
 
     def form_valid(self, form):
         return super().form_valid(form)
+    
+
+class JobUpdateView(UpdateView):
+    model = Job
+    template_name = "jobs/job-create.html"
+    fields = ["title", "recruter", "salary", "location", "category" ,"job_types"]
+    success_url = reverse_lazy('job-list')
+
+    def form_valid(self, form):
+        return super().form_valid(form)
+
+
+
+class JobDeleteView(DeleteView):
+    model = Job
+    template_name = "jobs/job-delete.html"
+    success_url = reverse_lazy('job-list')
