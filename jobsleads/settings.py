@@ -85,7 +85,7 @@ DATABASES = {
         'NAME': "jobs_application",
         'USER': "postgres",
         'PASSWORD': "postgres",
-        'HOST': "localhost",
+        'HOST': "db",
         'PORT': 5432,
     }
 }
